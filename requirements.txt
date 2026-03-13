@@ -5,3 +5,5 @@ matplotlib
 plotly
 requests
 pillow
+scikit-learn
+scipy
