@@ -2,8 +2,14 @@ streamlit
 pandas
 numpy
 matplotlib
+seaborn
 plotly
 requests
 pillow
 scikit-learn
 scipy
+folium
+streamlit-folium
+beautifulsoup4
+python-dotenv
+joblib
