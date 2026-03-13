@@ -1,4 +1,4 @@
-%%writefile pages/4_MPesa_Admin_Dashboard.py
+# %%writefile pages/4_MPesa_Admin_Dashboard.py
 import streamlit as st
 import pandas as pd
 import numpy as np

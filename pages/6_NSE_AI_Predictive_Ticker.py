@@ -1,4 +1,4 @@
-%%writefile pages/6_NSE_AI_Predictive_Ticker.py
+# %%writefile pages/6_NSE_AI_Predictive_Ticker.py
 import streamlit as st
 import pandas as pd
 import numpy as np
