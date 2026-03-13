@@ -26,4 +26,4 @@ This repository is an interactive **Streamlit Hub** showcasing industrial-grade 
 3. Launch the app: `streamlit run app.py`
 
 ---
-**Contact:** [Your WhatsApp Link] | [Your LinkedIn Link]
+**Contact:** [WhatsApp: +243 893 958 170] | [gilbertakg@gmail.com]
