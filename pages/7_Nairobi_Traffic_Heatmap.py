@@ -1,4 +1,3 @@
-# %%writefile pages/7_Nairobi_Traffic_Heatmap.py
 import streamlit as st
 import pandas as pd
 import numpy as np
