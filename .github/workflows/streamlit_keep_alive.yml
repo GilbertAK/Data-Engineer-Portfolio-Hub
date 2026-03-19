@@ -1,0 +1,35 @@
+name: Streamlit Keep Alive Protocol
+
+on:
+  schedule:
+    # S'exécute toutes les 6 heures (environ 4 fois par jour)
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Permet de lancer manuellement depuis l'onglet Actions
+
+jobs:
+  heartbeat-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du dépôt
+        uses: actions/checkout@v3
+
+      - name: Délai aléatoire (Anti-Détection)
+        # Attend entre 1 et 50 minutes avant de s'exécuter
+        # Cela évite que les commits soient faits pile à la même minute
+        run: sleep $(( (RANDOM % 3000) + 1 ))
+
+      - name: Configuration de Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Exécution du script de réactivation
+        run: python keep_alive.py
+
+      - name: Commit et Push des modifications
+        run: |
+          git config --local user.email "maintenance@github-action.com"
+          git config --local user.name "System Maintenance"
+          git add heartbeat.txt
+          git commit -m "System integrity check: $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+          git push
