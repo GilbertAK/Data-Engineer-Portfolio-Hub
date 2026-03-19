@@ -12,3 +12,4 @@ with open(file_path, "w", encoding="utf-8") as f:
     f.write(f"Dernière maintenance système : {current_time}\nStatut : Opérationnel")
 
 print(f"Succès : heartbeat.txt mis à jour à {current_time}")
+
